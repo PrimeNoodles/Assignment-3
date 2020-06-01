@@ -8,36 +8,28 @@ document.querySelector("container");
 document.getElementsByClassName("second");
 
 //Selecting a list item with a class of third, but only the list item inside of the ol tag
-document. querySelector("ol.third");
+document.querySelector("ol .third");
 
 //Giving the section with an id of container the text "Hello!"
-var foundDiv = document.querySelector('#container');
-foundDiv.innerText = "Hello";
+document.getElementById("container").innerText = "Hello!";
 
 //Adding the class main to the div with a class of footer
-var footer = document.querySelector(".footer");
-footer.classList.add("main");
+document.querySelector(".footer").classList.add("main");
 
 //Removing the class main on the div with a class of footer
-var footer = document.querySelector(".footer");
-footer.classList.remove("main");
+document.querySelector(".footer").classList.remove("main");
 
 //Creating a new li element
-var newLI = document.createElement("li");
+let newLi = document.createElement("li");
 
 //Giving the li element the text "four"
-newLI.innerText = "four"
+newLi.innerText = "four";
 
 //Appending the li element to the ul element
-var list = document.querySelector("ul");
-list.appendChild(newLI);
+document.querySelector("ul").append(newLi);
 
 //Looping over all of the lis inside the ol tag and giving them a background color of "green"
-var liInsideOl = document.querySelectorAll("ol LI");
-for(var i = 0; i <liInsideOl.length; i++){
-    liInsideOl[i].getElementsByClassName.backgroundColor = "green";
-}
+document.querySelectorAll("ol li").forEach(function(element) { element.style.backgroundColor = "green" })
 
 //Removing the div with a class of footer
-var footer = document.querySelector(".footer");
-footer.remove();
+document.querySelector(".footer").remove();
